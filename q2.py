@@ -6,7 +6,16 @@ def find_and_replace(lst, find_val, replace_val):
     - Return the modified list.
     """
     return
-
+# Ensure lst is actually a list before processing
+    if not isinstance(lst, list):
+        return lst
+        
+    # Iterate through list indices and replace matching elements
+    for i in range(len(lst)):
+        if lst[i] == find_val:
+            lst[i] = replace_val
+            
+    return lst
 
 # Task 2
 # Invoke the function "find_and_replace" using the following scenarios:
