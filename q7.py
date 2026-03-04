@@ -8,7 +8,15 @@ class Car:
 
     def describe_car(self):
         print("")
+def __init__(self, make, model, year):
+        # Initialize attributes
+        self.make = make
+        self.model = model
+        self.year = year
 
+    def describe_car(self):
+        # Print using formatted strings
+        print(f"{self.year} {self.make} {self.model}")
 
 # Task 2
 # Create an instance of the Car class with the following attributes and call describe_car method:
