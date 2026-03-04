@@ -6,7 +6,16 @@ def check_divisibility(num, divisor):
     - Return True if num is divisible by divisor, False otherwise.
     """
     return
-
+# Validate that both inputs are numeric (and not booleans)
+    if not (isinstance(num, (int, float)) and isinstance(divisor, (int, float))) or isinstance(num, bool) or isinstance(divisor, bool):
+        return False
+        
+    # Handle division by zero to prevent crashes
+    if divisor == 0:
+        return False
+        
+    # Modulo operator (%) returns 0 if there is no remainder
+    return num % divisor == 0
 
 # Task 2
 # Invoke the function "check_divisibility" using the following scenarios:
