@@ -6,7 +6,14 @@ def find_first_negative(lst):
     - Use a while loop to implement this.
     """
     return
-
+i = 0
+    # Loop continuously while the index is within the valid bounds of the list
+    while i < len(lst):
+        if lst[i] < 0:
+            return lst[i]
+        i += 1  # Increment to check the next item and prevent an infinite loop
+        
+    return "No negatives"
 
 # Task 2
 # Invoke the function "find_first_negative" using the following scenario:
